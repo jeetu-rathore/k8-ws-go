@@ -140,3 +140,10 @@ MILK_FOAM_QUANTITY
   - Go
 - **API Communication:**  
   - REST or gRPC for service-to-service communication.
+
+
+### Domains
+
+Inventory Service: https://didactic-tribble-vxr7v6vq6r3pj57-3000.app.github.dev/
+
+Order Service: https://didactic-tribble-vxr7v6vq6r3pj57-4000.app.github.dev/
