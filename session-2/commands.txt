@@ -1,0 +1,8 @@
+# Create Network 'coffe-shop'
+cmd 1: docker network create coffe-shop
+
+# Run docker container for the inventory service attching network coffe-shop and port expose 8082
+cmd 2: docker run -d --name inventory --network coffe-shop -p 8082:3000 inventory-service
+
+# Run docker container for the order service attching network coffe-shop and pass env INVENTORY_URL
+cmd 2: docker run -d --name order --network coffe-shop -p 4000:4000 -e INVENTORY_URL=http://inventory:3000 order-service 
