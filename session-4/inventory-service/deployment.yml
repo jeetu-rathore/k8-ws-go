@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-service
+  labels:
+    app: inventory-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inventory-service
+  template:
+    metadata:
+      labels:
+        app: inventory-service
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: inventory-service-container
+          image: jeeturathore89/inventory-service:v1.0.0
+          ports:
+            - containerPort: 3000
